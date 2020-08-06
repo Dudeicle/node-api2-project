@@ -122,7 +122,7 @@ router.put("/:id", (req, res) => {
 	Actions.findById(req.params.id)
 		.then((arrayItem) => {
 			// LEVEL 1
-			if (!arrayItem.title || !array.contents) {
+			if (!updatedPost.title || !updatedPost.contents) {
 				res.status(400).json({
 					errorMessage: "Please provide title and contents for the post.",
 				});
